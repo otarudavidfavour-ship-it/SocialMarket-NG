@@ -1,21 +1,3 @@
-<section style="padding: 30px; text-align: center;">
-  <h2>Pay via OPay</h2>
-  <p>Make your payment directly to our OPay account.</p>
-
-  <div style="margin: 20px auto; max-width: 400px; padding: 20px; border: 1px solid #ddd; border-radius: 12px;">
-    <p><strong>OPay Account Name:</strong> David Favour OTARU</p>
-    <p><strong>OPay Account Number:</strong> 9016050908</p>
-
-    <p style="margin-top: 15px;">
-      Please confirm the account name before sending your payment.
-    </p>
-
-    <a href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%20have%20made%20an%20OPay%20payment."
-       style="display: inline-block; padding: 12px 20px; background: #25D366; color: white; text-decoration: none; border-radius: 8px;">
-      I Have Made Payment
-    </a>
-  </div>
-</section>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,6 +196,66 @@
       font-size: 14px;
     }
 
+    /* OPay Payment Box */
+
+    .payment-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 2000;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .payment-box {
+      background: white;
+      max-width: 450px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    }
+
+    .payment-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .payment-service {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+
+    .payment-amount {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .opay-details {
+      background: #f7f8fc;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .opay-details p {
+      margin: 8px 0;
+    }
+
+    .close-btn {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .payment-note {
+      font-size: 13px;
+      color: #666;
+      margin: 15px 0;
+    }
+
     @media (max-width: 700px) {
       header {
         flex-direction: column;
@@ -227,6 +269,11 @@
 
       .hero h1 {
         font-size: 32px;
+      }
+
+      .payment-box {
+        margin: 20px auto;
+        padding: 22px;
       }
     }
   </style>
@@ -245,7 +292,9 @@
   </nav>
 </header>
 
+
 <section class="hero">
+
   <h1>Grow Your Social Media Presence</h1>
 
   <p>
@@ -254,118 +303,293 @@
   </p>
 
   <div class="hero-buttons">
-    <a class="btn btn-primary" href="#services">View Services</a>
 
-    <a class="btn btn-dark"
-       href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
-       target="_blank">
+    <a class="btn btn-primary" href="#services">
+      View Services
+    </a>
+
+    <a
+      class="btn btn-dark"
+      href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
+      target="_blank">
       Chat on WhatsApp
     </a>
+
   </div>
+
 </section>
 
 
 <section id="services">
 
   <div class="section-title">
+
     <h2>Our Services</h2>
+
     <p>Choose the service that fits your needs.</p>
+
   </div>
+
 
   <div class="services">
 
+
     <div class="card">
+
       <h3>📸 Instagram Growth</h3>
-      <p>Get help growing your Instagram presence and reaching more people.</p>
+
+      <p>
+        Get help growing your Instagram presence and reaching more people.
+      </p>
+
       <div class="price">From ₦5,000</div>
-      <button class="btn btn-blue" onclick="whatsapp('Instagram Growth')">Get Started</button>
-      <button class="btn btn-primary" onclick="pay('Instagram Growth', 5000)">Pay Online</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Instagram Growth')">
+        Get Started
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="pay('Instagram Growth', 5000)">
+        Pay Online
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>🎵 TikTok Promotion</h3>
-      <p>Promote your TikTok content and reach more potential viewers.</p>
+
+      <p>
+        Promote your TikTok content and reach more potential viewers.
+      </p>
+
       <div class="price">From ₦5,000</div>
-      <button class="btn btn-blue" onclick="whatsapp('TikTok Promotion')">Get Started</button>
-      <button class="btn btn-primary" onclick="pay('TikTok Promotion', 5000)">Pay Online</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('TikTok Promotion')">
+        Get Started
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="pay('TikTok Promotion', 5000)">
+        Pay Online
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>📘 Facebook Promotion</h3>
-      <p>Improve your Facebook presence and reach your target audience.</p>
+
+      <p>
+        Improve your Facebook presence and reach your target audience.
+      </p>
+
       <div class="price">From ₦5,000</div>
-      <button class="btn btn-blue" onclick="whatsapp('Facebook Promotion')">Get Started</button>
-      <button class="btn btn-primary" onclick="pay('Facebook Promotion', 5000)">Pay Online</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Facebook Promotion')">
+        Get Started
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="pay('Facebook Promotion', 5000)">
+        Pay Online
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>🎨 Social Media Design</h3>
-      <p>Professional graphics for Instagram, Facebook, TikTok and more.</p>
+
+      <p>
+        Professional graphics for Instagram, Facebook, TikTok and more.
+      </p>
+
       <div class="price">From ₦3,000</div>
-      <button class="btn btn-blue" onclick="whatsapp('Social Media Design')">Get Started</button>
-      <button class="btn btn-primary" onclick="pay('Social Media Design', 3000)">Pay Online</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Social Media Design')">
+        Get Started
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="pay('Social Media Design', 3000)">
+        Pay Online
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>🖌️ Logo Design</h3>
-      <p>Create a professional logo for your business or personal brand.</p>
+
+      <p>
+        Create a professional logo for your business or personal brand.
+      </p>
+
       <div class="price">Get a Quote</div>
-      <button class="btn btn-blue" onclick="whatsapp('Logo Design')">Get Quote</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Logo Design')">
+        Get Quote
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>📰 Flyer & Poster Design</h3>
-      <p>Eye-catching flyers and posters for your business and events.</p>
+
+      <p>
+        Eye-catching flyers and posters for your business and events.
+      </p>
+
       <div class="price">Get a Quote</div>
-      <button class="btn btn-blue" onclick="whatsapp('Flyer and Poster Design')">Get Quote</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Flyer and Poster Design')">
+        Get Quote
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>🎬 Video Editing</h3>
-      <p>Professional editing for social media videos and promotional content.</p>
+
+      <p>
+        Professional editing for social media videos and promotional content.
+      </p>
+
       <div class="price">Get a Quote</div>
-      <button class="btn btn-blue" onclick="whatsapp('Video Editing')">Get Quote</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Video Editing')">
+        Get Quote
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>✍️ Content Creation</h3>
-      <p>Engaging content created for your business and social media pages.</p>
+
+      <p>
+        Engaging content created for your business and social media pages.
+      </p>
+
       <div class="price">From ₦10,000</div>
-      <button class="btn btn-blue" onclick="whatsapp('Content Creation')">Get Started</button>
-      <button class="btn btn-primary" onclick="pay('Content Creation', 10000)">Pay Online</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Content Creation')">
+        Get Started
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="pay('Content Creation', 10000)">
+        Pay Online
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>📊 Social Media Management</h3>
-      <p>Let us help manage and maintain your social media presence.</p>
+
+      <p>
+        Let us help manage and maintain your social media presence.
+      </p>
+
       <div class="price">Get a Quote</div>
-      <button class="btn btn-blue" onclick="whatsapp('Social Media Management')">Get Quote</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Social Media Management')">
+        Get Quote
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>📢 Social Media Advertising</h3>
-      <p>Promote your business and reach your target customers online.</p>
+
+      <p>
+        Promote your business and reach your target customers online.
+      </p>
+
       <div class="price">Get a Quote</div>
-      <button class="btn btn-blue" onclick="whatsapp('Social Media Advertising')">Get Quote</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Social Media Advertising')">
+        Get Quote
+      </button>
+
     </div>
 
+
     <div class="card">
+
       <h3>⭐ Influencer Promotion</h3>
-      <p>Connect your brand with promotional opportunities through creators.</p>
+
+      <p>
+        Connect your brand with promotional opportunities through creators.
+      </p>
+
       <div class="price">Get a Quote</div>
-      <button class="btn btn-blue" onclick="whatsapp('Influencer Promotion')">Get Quote</button>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Influencer Promotion')">
+        Get Quote
+      </button>
+
     </div>
+
 
   </div>
+
 </section>
 
 
 <section id="marketplace" class="marketplace">
 
   <div class="section-title">
+
     <h2>🛒 Social Media Marketplace</h2>
-    <p>Buy or sell eligible social media pages and digital social assets.</p>
+
+    <p>
+      Buy or sell eligible social media pages and digital social assets.
+    </p>
+
   </div>
+
 
   <div class="market-box">
 
@@ -376,121 +600,251 @@
       interested in buying or selling and we will discuss the details.
     </p>
 
+
     <div class="market-options">
 
       <div class="market-option">
+
         <h3>Instagram</h3>
+
         <p>Accounts / Pages</p>
+
       </div>
 
+
       <div class="market-option">
+
         <h3>TikTok</h3>
+
         <p>Accounts / Pages</p>
+
       </div>
 
+
       <div class="market-option">
+
         <h3>Facebook</h3>
+
         <p>Pages / Assets</p>
+
       </div>
 
+
       <div class="market-option">
+
         <h3>Other</h3>
+
         <p>Other social platforms</p>
+
       </div>
 
     </div>
 
+
     <p>
-      <strong>Important:</strong> All transactions are subject to the
-      applicable platform's rules and eligibility requirements.
+
+      <strong>Important:</strong>
+      All transactions are subject to the applicable platform's
+      rules and eligibility requirements.
+
     </p>
+
 
     <button
       class="btn btn-primary"
       onclick="marketplaceWhatsApp()">
+
       Buy / Sell Inquiry
+
     </button>
 
   </div>
+
 </section>
 
 
 <section id="about">
 
   <div class="section-title">
+
     <h2>Why Choose SocialMarket NG?</h2>
-    <p>Simple, accessible social media services for Nigerians.</p>
+
+    <p>
+      Simple, accessible social media services for Nigerians.
+    </p>
+
   </div>
+
 
   <div class="why-us">
 
+
     <div class="why-card">
+
       <h3>🇳🇬 Nigeria Focused</h3>
-      <p>Our services and pricing are designed for the Nigerian market.</p>
+
+      <p>
+        Our services and pricing are designed for the Nigerian market.
+      </p>
+
     </div>
 
+
     <div class="why-card">
+
       <h3>💰 Affordable</h3>
-      <p>Choose services that fit your budget and business needs.</p>
+
+      <p>
+        Choose services that fit your budget and business needs.
+      </p>
+
     </div>
 
+
     <div class="why-card">
+
       <h3>💬 Easy Communication</h3>
-      <p>Contact us directly through WhatsApp.</p>
+
+      <p>
+        Contact us directly through WhatsApp.
+      </p>
+
     </div>
 
+
     <div class="why-card">
+
       <h3>📱 Mobile Friendly</h3>
-      <p>Our website is designed to work on phones, tablets and computers.</p>
+
+      <p>
+        Our website is designed to work on phones, tablets and computers.
+      </p>
+
     </div>
+
 
   </div>
+
 </section>
 
 
 <section id="contact" class="contact">
 
   <div class="section-title">
+
     <h2>Contact SocialMarket NG</h2>
+
     <p>Ready to get started?</p>
+
   </div>
 
+
   <p>📱 WhatsApp: 0901 605 0908</p>
+
   <p>💰 Payments: Nigerian Naira (₦)</p>
+
 
   <a
     class="btn btn-primary"
     href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20ready%20to%20get%20started."
     target="_blank">
+
     Contact Us on WhatsApp
+
   </a>
 
 </section>
 
 
 <footer>
+
   © 2026 SocialMarket NG. All rights reserved.
+
 </footer>
 
 
-<!-- Paystack -->
-<script src="https://js.paystack.co/v1/inline.js"></script>
+<!-- OPay Payment Window -->
+
+<div
+  id="paymentOverlay"
+  class="payment-overlay">
+
+  <div class="payment-box">
+
+    <h2>💳 OPay Payment</h2>
+
+    <p>Please make your payment for:</p>
+
+    <div
+      id="paymentService"
+      class="payment-service">
+    </div>
+
+    <div
+      id="paymentAmount"
+      class="payment-amount">
+    </div>
+
+
+    <div class="opay-details">
+
+      <p>
+        <strong>OPay Account Name</strong>
+      </p>
+
+      <p>
+        David Favour OTARU
+      </p>
+
+
+      <p>
+        <strong>OPay Account Number</strong>
+      </p>
+
+      <p>
+        9016050908
+      </p>
+
+    </div>
+
+
+    <p class="payment-note">
+
+      Please confirm that the recipient name is
+      <strong>David Favour OTARU</strong>
+      before sending your payment.
+
+    </p>
+
+
+    <button
+      class="btn btn-primary"
+      onclick="paymentMade()">
+
+      I've Made Payment
+
+    </button>
+
+
+    <button
+      class="btn close-btn"
+      onclick="closePayment()">
+
+      Cancel
+
+    </button>
+
+  </div>
+
+</div>
+
 
 <script>
 
   const WHATSAPP_NUMBER = "2349016050908";
 
-  /*
-    IMPORTANT:
-    Replace the value below with your Paystack PUBLIC key.
-
-    Example:
-    const PAYSTACK_PUBLIC_KEY = "pk_test_xxxxxxxxxxxxx";
-
-    NEVER put your Paystack SECRET KEY here.
-  */
-
-  const PAYSTACK_PUBLIC_KEY = "YOUR_PAYSTACK_PUBLIC_KEY";
+  let selectedService = "";
+  let selectedAmount = 0;
 
 
   function whatsapp(service) {
@@ -507,6 +861,7 @@
       encodeURIComponent(message);
 
     window.open(url, "_blank");
+
   }
 
 
@@ -522,79 +877,79 @@
       encodeURIComponent(message);
 
     window.open(url, "_blank");
+
   }
 
 
   function pay(service, amount) {
 
-    if (PAYSTACK_PUBLIC_KEY === "YOUR_PAYSTACK_PUBLIC_KEY") {
+    selectedService = service;
 
-      alert(
-        "Online payment is not activated yet. Please contact SocialMarket NG on WhatsApp to get started."
-      );
+    selectedAmount = amount;
 
-      whatsapp(service);
 
-      return;
-    }
+    document.getElementById("paymentService").textContent =
+      service;
 
-    const email = prompt(
-      "Enter your email address for your payment receipt:"
-    );
 
-    if (!email) {
-      return;
-    }
+    document.getElementById("paymentAmount").textContent =
+      "₦" + amount.toLocaleString("en-NG");
 
-    const handler = PaystackPop.setup({
 
-      key: PAYSTACK_PUBLIC_KEY,
+    document.getElementById("paymentOverlay").style.display =
+      "block";
 
-      email: email,
+    document.body.style.overflow = "hidden";
 
-      amount: amount * 100,
-
-      currency: "NGN",
-
-      ref: "SMNG-" + Date.now(),
-
-      metadata: {
-        custom_fields: [
-          {
-            display_name: "Service",
-            variable_name: "service",
-            value: service
-          }
-        ]
-      },
-
-      callback: function(response) {
-
-        alert(
-          "Payment started successfully. Reference: " +
-          response.reference
-        );
-
-        whatsapp(
-          service +
-          ". I have just made a payment. My payment reference is " +
-          response.reference
-        );
-
-      },
-
-      onClose: function() {
-
-        alert("Payment window closed.");
-
-      }
-
-    });
-
-    handler.openIframe();
   }
+
+
+  function closePayment() {
+
+    document.getElementById("paymentOverlay").style.display =
+      "none";
+
+    document.body.style.overflow = "auto";
+
+  }
+
+
+  function paymentMade() {
+
+    const message =
+      "Hello SocialMarket NG, I have made my OPay payment.\n\n" +
+      "Service: " + selectedService + "\n" +
+      "Amount paid: ₦" + selectedAmount.toLocaleString("en-NG") + "\n\n" +
+      "I will send my payment receipt/reference here for confirmation.";
+
+    const url =
+      "https://wa.me/" +
+      WHATSAPP_NUMBER +
+      "?text=" +
+      encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+    closePayment();
+
+  }
+
+
+  window.onclick = function(event) {
+
+    const overlay =
+      document.getElementById("paymentOverlay");
+
+    if (event.target === overlay) {
+
+      closePayment();
+
+    }
+
+  };
 
 </script>
 
+
 </body>
-                                                 </html>
+  </html>
