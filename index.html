@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>SocialMarket NG | Social Media Services</title>
+
+  <meta
+    name="description"
+    content="SocialMarket NG provides affordable social media services, video editing, content creation and digital marketing services in Nigeria."
+  >
 
   <style>
     * {
@@ -12,17 +18,21 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f7f8fc;
-      color: #222;
+      color: #1f2937;
       line-height: 1.6;
     }
 
     header {
       background: #111827;
       color: white;
-      padding: 18px 6%;
+      padding: 16px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,33 +46,43 @@
       font-weight: bold;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
+      margin-left: 16px;
       font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .hero {
       background: linear-gradient(135deg, #111827, #2563eb);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
+      font-size: 44px;
+      margin-bottom: 18px;
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
       font-size: 18px;
     }
 
     .hero-buttons {
-      margin-top: 25px;
+      margin-top: 28px;
     }
 
     .btn {
@@ -82,23 +102,23 @@
       color: white;
     }
 
-    .btn-dark {
-      background: #111827;
-      color: white;
-    }
-
     .btn-blue {
       background: #2563eb;
       color: white;
     }
 
+    .btn-dark {
+      background: #111827;
+      color: white;
+    }
+
     section {
-      padding: 60px 6%;
+      padding: 65px 6%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
 
     .section-title h2 {
@@ -110,9 +130,13 @@
       color: #666;
     }
 
-    .services {
+    .services,
+    .pricing-grid,
+    .portfolio-grid,
+    .why-us,
+    .faq-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 20px;
     }
 
@@ -120,7 +144,7 @@
       background: white;
       border-radius: 14px;
       padding: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
     }
 
     .card h3 {
@@ -138,78 +162,129 @@
       margin-bottom: 12px;
     }
 
-    .marketplace {
-      background: #eef4ff;
-    }
+    /* Pricing */
 
-    .market-box {
-      max-width: 900px;
-      margin: auto;
+    .pricing-card {
       background: white;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 14px;
       text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      border: 2px solid transparent;
     }
 
-    .market-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin: 25px 0;
+    .pricing-card.featured {
+      border-color: #2563eb;
     }
 
-    .market-option {
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background: #fafafa;
-    }
-
-    .market-option h3 {
+    .pricing-card h3 {
+      font-size: 22px;
       margin-bottom: 10px;
     }
 
-    .market-option p {
-      color: #666;
-      margin-bottom: 8px;
+    .pricing-card .price {
+      font-size: 28px;
+      color: #2563eb;
+      margin: 15px 0;
     }
 
-    .buy-price {
-      display: block;
+    .pricing-card ul {
+      list-style: none;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .pricing-card li {
+      margin-bottom: 10px;
+    }
+
+    /* Portfolio */
+
+    .portfolio-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .portfolio-image {
+      height: 180px;
+      background: linear-gradient(135deg, #111827, #2563eb);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      font-size: 22px;
       font-weight: bold;
-      margin-top: 5px;
     }
 
-    .sell-price {
-      display: block;
-      font-weight: bold;
-      margin-top: 5px;
+    .portfolio-content {
+      padding: 20px;
     }
 
-    .market-note {
-      margin-top: 20px;
-      font-size: 13px;
+    .portfolio-content p {
       color: #666;
     }
 
-    .why-us {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    /* About */
+
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      text-align: center;
     }
+
+    /* Why Choose Us */
 
     .why-card {
       background: white;
       padding: 25px;
       border-radius: 12px;
       text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      color: #666;
+    }
+
+    /* FAQ */
+
+    .faq-card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .faq-card p {
+      color: #666;
+    }
+
+    /* Contact */
 
     .contact {
       background: #111827;
       color: white;
       text-align: center;
+    }
+
+    .contact .section-title p {
+      color: #d1d5db;
     }
 
     .contact p {
@@ -220,69 +295,12 @@
       background: #080d18;
       color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 22px;
       font-size: 14px;
     }
 
-    .payment-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: 2000;
-      padding: 20px;
-      overflow-y: auto;
-    }
-
-    .payment-box {
-      background: white;
-      max-width: 450px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-    }
-
-    .payment-box h2 {
-      margin-bottom: 10px;
-    }
-
-    .payment-service {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 15px 0 5px;
-    }
-
-    .payment-amount {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .opay-details {
-      background: #f7f8fc;
-      padding: 18px;
-      border-radius: 12px;
-      margin: 20px 0;
-    }
-
-    .opay-details p {
-      margin: 8px 0;
-    }
-
-    .close-btn {
-      background: #e5e7eb;
-      color: #111827;
-    }
-
-    .payment-note {
-      font-size: 13px;
-      color: #666;
-      margin: 15px 0;
-    }
-
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
         gap: 12px;
@@ -297,9 +315,12 @@
         font-size: 32px;
       }
 
-      .payment-box {
-        margin: 20px auto;
-        padding: 22px;
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 50px 5%;
       }
     }
   </style>
@@ -307,24 +328,38 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-  <div class="logo">SocialMarket NG</div>
+
+  <div class="logo">
+    SocialMarket NG
+  </div>
 
   <nav>
+    <a href="#home">Home</a>
     <a href="#services">Services</a>
-    <a href="#marketplace">Marketplace</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
-<section class="hero">
 
-  <h1>Grow Your Social Media Presence</h1>
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+  <h1>
+    Grow Your Social Media Presence
+  </h1>
 
   <p>
     SocialMarket NG helps businesses, creators and individuals
-    grow, promote and manage their social media presence.
+    create, promote and manage their social media presence.
   </p>
 
   <div class="hero-buttons">
@@ -336,7 +371,8 @@
     <a
       class="btn btn-dark"
       href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
-      target="_blank">
+      target="_blank"
+    >
       Chat on WhatsApp
     </a>
 
@@ -344,383 +380,743 @@
 
 </section>
 
+
+<!-- ================= SERVICES ================= -->
+
 <section id="services">
 
   <div class="section-title">
-    <h2>Our Services</h2>
-    <p>Choose the service that fits your needs.</p>
+
+    <h2>
+      Our Services
+    </h2>
+
+    <p>
+      Professional digital and social media services for your brand.
+    </p>
+
   </div>
+
 
   <div class="services">
 
-    <div class="card">
-      <h3>📸 Instagram Growth</h3>
-      <p>Get help growing your Instagram presence and reaching more people.</p>
-      <div class="price">₦5,000</div>
-
-      <button class="btn btn-blue"
-        onclick="whatsapp('Instagram Growth')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('Instagram Growth', 5000)">
-        Pay Online
-      </button>
-    </div>
 
     <div class="card">
-      <h3>🎵 TikTok Promotion</h3>
-      <p>Promote your TikTok content and reach more potential viewers.</p>
-      <div class="price">₦5,000</div>
 
-      <button class="btn btn-blue"
-        onclick="whatsapp('TikTok Promotion')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('TikTok Promotion', 5000)">
-        Pay Online
-      </button>
-    </div>
-
-    <div class="card">
-      <h3>📘 Facebook Promotion</h3>
-      <p>Improve your Facebook presence and reach your target audience.</p>
-      <div class="price">₦5,000</div>
-
-      <button class="btn btn-blue"
-        onclick="whatsapp('Facebook Promotion')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('Facebook Promotion', 5000)">
-        Pay Online
-      </button>
-    </div>
-
-    <div class="card">
-      <h3>🎨 Social Media Design</h3>
-      <p>Professional graphics for Instagram, Facebook, TikTok and more.</p>
-      <div class="price">₦3,000</div>
-
-      <button class="btn btn-blue"
-        onclick="whatsapp('Social Media Design')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('Social Media Design', 3000)">
-        Pay Online
-      </button>
-    </div>
-
-    <div class="card">
-      <h3>🖌️ Logo Design</h3>
-      <p>Create a professional logo for your business or personal brand.</p>
-      <div class="price">₦5,000</div>
-
-      <button class="btn btn-blue"
-        onclick="whatsapp('Logo Design')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('Logo Design', 5000)">
-        Pay Online
-      </button>
-    </div>
-
-    <div class="card">
-      <h3>📰 Flyer & Poster Design</h3>
-      <p>Eye-catching flyers and posters for your business and events.</p>
-      <div class="price">₦3,000</div>
-
-      <button class="btn btn-blue"
-        onclick="whatsapp('Flyer and Poster Design')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('Flyer and Poster Design', 3000)">
-        Pay Online
-      </button>
-    </div>
-
-    <div class="card">
       <h3>🎬 Video Editing</h3>
-      <p>Professional editing for social media videos and promotional content.</p>
-      <div class="price">₦7,000</div>
 
-      <button class="btn btn-blue"
-        onclick="whatsapp('Video Editing')">
+      <p>
+        Professional editing for TikTok, Instagram Reels,
+        promotional videos and other social media content.
+      </p>
+
+      <div class="price">
+        From ₦5,000
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Video Editing')"
+      >
         Get Started
       </button>
 
-      <button class="btn btn-primary"
-        onclick="pay('Video Editing', 7000)">
-        Pay Online
-      </button>
     </div>
 
+
     <div class="card">
+
+      <h3>📱 Social Media Management</h3>
+
+      <p>
+        Help managing and maintaining your social media
+        presence and content.
+      </p>
+
+      <div class="price">
+        Get a Quote
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Social Media Management')"
+      >
+        Get Quote
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>📸 Instagram Growth</h3>
+
+      <p>
+        Improve your Instagram presence and reach more
+        potential customers.
+      </p>
+
+      <div class="price">
+        From ₦5,000
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Instagram Growth')"
+      >
+        Get Started
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🎵 TikTok Promotion</h3>
+
+      <p>
+        Promote your TikTok content and reach more potential
+        viewers.
+      </p>
+
+      <div class="price">
+        From ₦5,000
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('TikTok Promotion')"
+      >
+        Get Started
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🎨 Social Media Design</h3>
+
+      <p>
+        Professional graphics for Instagram, Facebook,
+        TikTok and other platforms.
+      </p>
+
+      <div class="price">
+        From ₦3,000
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Social Media Design')"
+      >
+        Get Started
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🖌️ Logo Design</h3>
+
+      <p>
+        Professional logos for businesses, creators and
+        personal brands.
+      </p>
+
+      <div class="price">
+        Get a Quote
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Logo Design')"
+      >
+        Get Quote
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>📰 Flyer & Poster Design</h3>
+
+      <p>
+        Eye-catching flyers and posters for businesses,
+        promotions and events.
+      </p>
+
+      <div class="price">
+        Get a Quote
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Flyer and Poster Design')"
+      >
+        Get Quote
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
       <h3>✍️ Content Creation</h3>
-      <p>Engaging content created for your business and social media pages.</p>
-      <div class="price">₦10,000</div>
 
-      <button class="btn btn-blue"
-        onclick="whatsapp('Content Creation')">
+      <p>
+        Engaging content designed to help businesses
+        communicate with their audience.
+      </p>
+
+      <div class="price">
+        From ₦10,000
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Content Creation')"
+      >
         Get Started
       </button>
 
-      <button class="btn btn-primary"
-        onclick="pay('Content Creation', 10000)">
-        Pay Online
-      </button>
     </div>
 
-    <div class="card">
-      <h3>📊 Social Media Management</h3>
-      <p>Let us help manage and maintain your social media presence.</p>
-      <div class="price">₦15,000 / month</div>
-
-      <button class="btn btn-blue"
-        onclick="whatsapp('Social Media Management')">
-        Get Started
-      </button>
-
-      <button class="btn btn-primary"
-        onclick="pay('Social Media Management - 1 Month', 15000)">
-        Pay Online
-      </button>
-    </div>
 
     <div class="card">
+
       <h3>📢 Social Media Advertising</h3>
-      <p>Promote your business and reach your target customers online.</p>
-      <div class="price">₦10,000</div>
 
-      <button class="btn btn-blue"
-        onclick="whatsapp('Social Media Advertising')">
-        Get Started
+      <p>
+        Promote your business and reach your target
+        customers online.
+      </p>
+
+      <div class="price">
+        Get a Quote
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Social Media Advertising')"
+      >
+        Get Quote
       </button>
 
-      <button class="btn btn-primary"
-        onclick="pay('Social Media Advertising', 10000)">
-        Pay Online
-      </button>
     </div>
+
 
     <div class="card">
+
       <h3>⭐ Influencer Promotion</h3>
-      <p>Connect your brand with promotional opportunities through creators.</p>
-      <div class="price">₦15,000</div>
 
-      <button class="btn btn-blue"
-        onclick="whatsapp('Influencer Promotion')">
-        Get Started
+      <p>
+        Promotional opportunities through suitable
+        creators and influencers.
+      </p>
+
+      <div class="price">
+        Get a Quote
+      </div>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Influencer Promotion')"
+      >
+        Get Quote
       </button>
 
-      <button class="btn btn-primary"
-        onclick="pay('Influencer Promotion', 15000)">
-        Pay Online
-      </button>
     </div>
+
 
   </div>
+
 </section>
 
-<section id="marketplace" class="marketplace">
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
 
   <div class="section-title">
-    <h2>🛒 Social Media Marketplace</h2>
+
+    <h2>
+      Simple Pricing
+    </h2>
+
     <p>
-      Buy or sell eligible social media pages and digital social assets.
+      Choose a package or contact us for a custom quote.
     </p>
+
   </div>
 
-  <div class="market-box">
 
-    <h3>Looking to Buy or Sell?</h3>
+  <div class="pricing-grid">
 
-    <p>
-      Choose a platform below and contact us to discuss
-      availability and transaction details.
-    </p>
 
-    <div class="market-options">
+    <div class="pricing-card">
 
-      <div class="market-option">
-        <h3>📸 Instagram</h3>
-        <p>1,000 followers</p>
-        <span class="buy-price">Buy: ₦3,000</span>
-        <span class="sell-price">Sell: ₦4,500</span>
+      <h3>Starter</h3>
+
+      <div class="price">
+        From ₦5,000
       </div>
 
-      <div class="market-option">
-        <h3>🎵 TikTok</h3>
-        <p>3,500 followers</p>
-        <span class="buy-price">Buy: ₦3,500</span>
-        <span class="sell-price">Sell: ₦4,500</span>
-      </div>
+      <ul>
+        <li>✓ Basic social media service</li>
+        <li>✓ Simple video editing</li>
+        <li>✓ WhatsApp support</li>
+        <li>✓ Suitable for individuals</li>
+      </ul>
 
-      <div class="market-option">
-        <h3>📘 Facebook</h3>
-        <p>Facebook Page</p>
-        <span class="buy-price">Buy: ₦3,000</span>
-        <span class="sell-price">Sell: ₦4,000</span>
-      </div>
-
-      <div class="market-option">
-        <h3>🌐 Other Platforms</h3>
-        <p>Social media accounts/pages</p>
-        <span class="buy-price">Buy: ₦3,000</span>
-        <span class="sell-price">Sell: ₦4,000</span>
-      </div>
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Starter Package')"
+      >
+        Get Started
+      </button>
 
     </div>
 
-    <p class="market-note">
-      <strong>Important:</strong>
-      Marketplace transactions are subject to the applicable
-      platform's rules, policies and eligibility requirements.
-    </p>
 
-    <button
-      class="btn btn-primary"
-      onclick="marketplaceWhatsApp()">
-      Buy / Sell Inquiry
-    </button>
+    <div class="pricing-card featured">
+
+      <h3>Growth</h3>
+
+      <div class="price">
+        From ₦10,000
+      </div>
+
+      <ul>
+        <li>✓ More advanced editing</li>
+        <li>✓ Social media support</li>
+        <li>✓ Content assistance</li>
+        <li>✓ Suitable for small businesses</li>
+      </ul>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Growth Package')"
+      >
+        Get Started
+      </button>
+
+    </div>
+
+
+    <div class="pricing-card">
+
+      <h3>Custom</h3>
+
+      <div class="price">
+        Get a Quote
+      </div>
+
+      <ul>
+        <li>✓ Custom services</li>
+        <li>✓ Business-focused solutions</li>
+        <li>✓ Flexible requirements</li>
+        <li>✓ Direct consultation</li>
+      </ul>
+
+      <button
+        class="btn btn-blue"
+        onclick="whatsapp('Custom Package')"
+      >
+        Get a Quote
+      </button>
+
+    </div>
+
 
   </div>
 
 </section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+  <div class="section-title">
+
+    <h2>
+      Our Work
+    </h2>
+
+    <p>
+      Examples of the type of digital content we can create.
+    </p>
+
+  </div>
+
+
+  <div class="portfolio-grid">
+
+
+    <div class="portfolio-card">
+
+      <div class="portfolio-image">
+        🎬 Video Editing
+      </div>
+
+      <div class="portfolio-content">
+
+        <h3>
+          Social Media Video
+        </h3>
+
+        <p>
+          Short-form videos with clean cuts, transitions,
+          captions and engaging presentation.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="portfolio-card">
+
+      <div class="portfolio-image">
+        🎨 Social Media Design
+      </div>
+
+      <div class="portfolio-content">
+
+        <h3>
+          Promotional Graphics
+        </h3>
+
+        <p>
+          Professional graphics designed to help businesses
+          promote products and services.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="portfolio-card">
+
+      <div class="portfolio-image">
+        📱 Content
+      </div>
+
+      <div class="portfolio-content">
+
+        <h3>
+          Business Content
+        </h3>
+
+        <p>
+          Content concepts designed for businesses,
+          creators and social media pages.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div style="text-align:center; margin-top:30px;">
+
+    <p style="color:#666;">
+      Our portfolio is growing. New customer projects
+      will be added here as we complete them.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
   <div class="section-title">
-    <h2>Why Choose SocialMarket NG?</h2>
+
+    <h2>
+      About SocialMarket NG
+    </h2>
+
     <p>
-      Simple, accessible social media services for Nigerians.
+      Helping businesses build a stronger online presence.
     </p>
+
   </div>
 
-  <div class="why-us">
 
-    <div class="why-card">
-      <h3>🇳🇬 Nigeria Focused</h3>
-      <p>
-        Our services and pricing are designed for the Nigerian market.
-      </p>
-    </div>
+  <div class="about-box">
 
-    <div class="why-card">
-      <h3>💰 Affordable</h3>
-      <p>
-        Choose services that fit your budget and business needs.
-      </p>
-    </div>
+    <p>
+      SocialMarket NG is a Nigeria-focused digital services
+      marketplace helping businesses, creators and individuals
+      improve their online presence.
+    </p>
 
-    <div class="why-card">
-      <h3>💬 Easy Communication</h3>
-      <p>
-        Contact us directly through WhatsApp.
-      </p>
-    </div>
+    <br>
 
-    <div class="why-card">
-      <h3>📱 Mobile Friendly</h3>
-      <p>
-        Our website is designed to work on phones, tablets and computers.
-      </p>
-    </div>
+    <p>
+      From video editing and social media design to content
+      creation and promotion, our goal is to provide simple,
+      affordable and accessible digital services.
+    </p>
 
   </div>
 
 </section>
 
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+  <div class="section-title">
+
+    <h2>
+      Why Choose SocialMarket NG?
+    </h2>
+
+    <p>
+      Simple services built around your needs.
+    </p>
+
+  </div>
+
+
+  <div class="why-us">
+
+
+    <div class="why-card">
+
+      <h3>
+        🇳🇬 Nigeria Focused
+      </h3>
+
+      <p>
+        Services and pricing designed with Nigerian
+        customers in mind.
+      </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <h3>
+        💰 Affordable
+      </h3>
+
+      <p>
+        Flexible services for individuals and small
+        businesses.
+      </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <h3>
+        💬 Easy Communication
+      </h3>
+
+      <p>
+        Speak with us directly through WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <h3>
+        📱 Mobile Friendly
+      </h3>
+
+      <p>
+        Our website works on phones, tablets and computers.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section id="faq">
+
+  <div class="section-title">
+
+    <h2>
+      Frequently Asked Questions
+    </h2>
+
+    <p>
+      Some common questions about our services.
+    </p>
+
+  </div>
+
+
+  <div class="faq-grid">
+
+
+    <div class="faq-card">
+
+      <h3>
+        How do I place an order?
+      </h3>
+
+      <p>
+        Simply contact us through WhatsApp and tell us
+        which service you need.
+      </p>
+
+    </div>
+
+
+    <div class="faq-card">
+
+      <h3>
+        How do I send my video for editing?
+      </h3>
+
+      <p>
+        Contact us on WhatsApp and we will explain the
+        easiest way to send your video files.
+      </p>
+
+    </div>
+
+
+    <div class="faq-card">
+
+      <h3>
+        How long does video editing take?
+      </h3>
+
+      <p>
+        Delivery time depends on the length and complexity
+        of the project. We will confirm the timeframe before
+        starting.
+      </p>
+
+    </div>
+
+
+    <div class="faq-card">
+
+      <h3>
+        How much do your services cost?
+      </h3>
+
+      <p>
+        Prices depend on the service and project. Some
+        services have starting prices while custom projects
+        receive a quote.
+      </p>
+
+    </div>
+
+
+    <div class="faq-card">
+
+      <h3>
+        Do you work with businesses?
+      </h3>
+
+      <p>
+        Yes. We work with businesses, creators and
+        individuals.
+      </p>
+
+    </div>
+
+
+    <div class="faq-card">
+
+      <h3>
+        How can I contact you?
+      </h3>
+
+      <p>
+        You can contact SocialMarket NG directly through
+        WhatsApp.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
 <section id="contact" class="contact">
 
   <div class="section-title">
-    <h2>Contact SocialMarket NG</h2>
-    <p>Ready to get started?</p>
+
+    <h2>
+      Let's Work Together
+    </h2>
+
+    <p>
+      Ready to grow your online presence?
+    </p>
+
   </div>
 
-  <p>📱 WhatsApp: 0901 605 0908</p>
-  <p>💰 Payments: Nigerian Naira (₦)</p>
+
+  <p>
+    📱 WhatsApp: 0901 605 0908
+  </p>
+
+  <p>
+    💰 Payments: Nigerian Naira (₦)
+  </p>
+
 
   <a
     class="btn btn-primary"
     href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20ready%20to%20get%20started."
-    target="_blank">
+    target="_blank"
+  >
     Contact Us on WhatsApp
   </a>
 
 </section>
 
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
   © 2026 SocialMarket NG. All rights reserved.
+
 </footer>
 
-<div
-  id="paymentOverlay"
-  class="payment-overlay">
 
-  <div class="payment-box">
-
-    <h2>💳 OPay Payment</h2>
-
-    <p>Please make your payment for:</p>
-
-    <div
-      id="paymentService"
-      class="payment-service">
-    </div>
-
-    <div
-      id="paymentAmount"
-      class="payment-amount">
-    </div>
-
-    <div class="opay-details">
-
-      <p><strong>OPay Account Name</strong></p>
-      <p>David Favour OTARU</p>
-
-      <p><strong>OPay Account Number</strong></p>
-      <p>9016050908</p>
-
-    </div>
-
-    <p class="payment-note">
-      Please confirm that the recipient name is
-      <strong>David Favour OTARU</strong>
-      before sending your payment.
-    </p>
-
-    <button
-      class="btn btn-primary"
-      onclick="paymentMade()">
-      I've Made Payment
-    </button>
-
-    <button
-      class="btn close-btn"
-      onclick="closePayment()">
-      Cancel
-    </button>
-
-  </div>
-</div>
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
   const WHATSAPP_NUMBER = "2349016050908";
 
-  let selectedService = "";
-  let selectedAmount = 0;
 
   function whatsapp(service) {
 
@@ -729,19 +1125,6 @@
       service +
       ". How can I get started?";
 
-    const url =
-      "https://wa.me/" +
-      WHATSAPP_NUMBER +
-      "?text=" +
-      encodeURIComponent(message);
-
-    window.open(url, "_blank");
-  }
-
-  function marketplaceWhatsApp() {
-
-    const message =
-      "Hello SocialMarket NG, I'm interested in buying or selling a social media account or page. How can I get started?";
 
     const url =
       "https://wa.me/" +
@@ -749,67 +1132,13 @@
       "?text=" +
       encodeURIComponent(message);
 
-    window.open(url, "_blank");
-  }
-
-  function pay(service, amount) {
-
-    selectedService = service;
-    selectedAmount = amount;
-
-    document.getElementById("paymentService").textContent =
-      service;
-
-    document.getElementById("paymentAmount").textContent =
-      "₦" + amount.toLocaleString("en-NG");
-
-    document.getElementById("paymentOverlay").style.display =
-      "block";
-
-    document.body.style.overflow = "hidden";
-  }
-
-  function closePayment() {
-
-    document.getElementById("paymentOverlay").style.display =
-      "none";
-
-    document.body.style.overflow = "auto";
-  }
-
-  function paymentMade() {
-
-    const message =
-      "Hello SocialMarket NG, I have made my OPay payment.\n\n" +
-      "Service: " + selectedService + "\n" +
-      "Amount paid: ₦" +
-      selectedAmount.toLocaleString("en-NG") +
-      "\n\n" +
-      "I will send my payment receipt/reference here for confirmation.";
-
-    const url =
-      "https://wa.me/" +
-      WHATSAPP_NUMBER +
-      "?text=" +
-      encodeURIComponent(message);
 
     window.open(url, "_blank");
 
-    closePayment();
   }
-
-  window.onclick = function(event) {
-
-    const overlay =
-      document.getElementById("paymentOverlay");
-
-    if (event.target === overlay) {
-      closePayment();
-    }
-
-  };
 
 </script>
+
 
 </body>
   </html>
