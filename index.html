@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SocialMarket NG</title>
+  <title>SocialMarket NG | Digital Marketing & Creative Services</title>
 
-  <meta name="description"
-    content="SocialMarket NG provides affordable social media services, digital marketing, creative design and social media marketplace services in Nigeria.">
+  <meta name="description" content="SocialMarket NG provides affordable digital marketing, social media and creative services for Nigerian businesses, creators and individuals.">
 
   <style>
     * {
@@ -73,8 +72,8 @@
     .hero p {
       font-size: 17px;
       line-height: 1.6;
+      max-width: 720px;
       margin: 0 auto 25px;
-      max-width: 700px;
     }
 
     .btn {
@@ -88,7 +87,7 @@
       margin: 5px;
     }
 
-    .btn-blue {
+    .blue-btn {
       display: inline-block;
       background: #2563eb;
       color: white;
@@ -99,7 +98,7 @@
       margin-top: 5px;
     }
 
-    .btn-green {
+    .green-btn {
       display: inline-block;
       background: #16a34a;
       color: white;
@@ -122,10 +121,11 @@
       font-size: 27px;
     }
 
-    .section-intro {
+    .intro {
       text-align: center;
       color: #667085;
       margin-bottom: 28px;
+      line-height: 1.5;
     }
 
     .cards {
@@ -146,8 +146,8 @@
     }
 
     .card p {
-      line-height: 1.5;
       color: #596579;
+      line-height: 1.5;
     }
 
     .price {
@@ -159,6 +159,12 @@
 
     .marketplace {
       background: #eef2ff;
+      max-width: none;
+    }
+
+    .marketplace-inner {
+      max-width: 1100px;
+      margin: auto;
     }
 
     .market-card {
@@ -169,8 +175,8 @@
       text-align: center;
     }
 
-    .market-card .icon {
-      font-size: 45px;
+    .market-icon {
+      font-size: 42px;
       margin-bottom: 12px;
     }
 
@@ -202,6 +208,15 @@
       background: #111827;
       color: white;
       max-width: none;
+    }
+
+    .payment-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .payment .intro {
+      color: #d1d5db;
     }
 
     .payment-box {
@@ -268,8 +283,8 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
       max-width: 850px;
       margin: auto;
-      line-height: 1.7;
       text-align: center;
+      line-height: 1.7;
     }
 
     .contact {
@@ -279,8 +294,21 @@
       text-align: center;
     }
 
+    .contact-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
     .contact p {
       margin: 8px 0;
+    }
+
+    .note {
+      text-align: center;
+      color: #667085;
+      margin-top: 18px;
+      font-size: 13px;
+      line-height: 1.5;
     }
 
     footer {
@@ -288,13 +316,6 @@
       color: white;
       text-align: center;
       padding: 25px 15px;
-    }
-
-    .note {
-      text-align: center;
-      color: #667085;
-      margin-top: 18px;
-      font-size: 14px;
     }
 
     @media (max-width: 700px) {
@@ -323,6 +344,7 @@
   <div class="logo">SocialMarket NG 🇳🇬</div>
 
   <nav>
+    <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#marketplace">Marketplace</a>
     <a href="#pricing">Pricing</a>
@@ -334,12 +356,12 @@
 </header>
 
 
-<section class="hero">
-  <h1>Grow Your Social Media</h1>
+<section class="hero" id="home">
+  <h1>Grow Your Business. Build Your Online Presence.</h1>
 
   <p>
-    Buy affordable digital social media services, creative solutions
-    and social media marketplace services from SocialMarket NG.
+    Affordable digital marketing, social media and creative services
+    for Nigerian businesses, creators and individuals.
   </p>
 
   <a href="#services" class="btn">Explore Services</a>
@@ -357,101 +379,80 @@
 
   <h2>Our Services</h2>
 
-  <p class="section-intro">
-    Professional and affordable digital services for businesses,
-    creators and individuals.
+  <p class="intro">
+    Professional and affordable services to help you build and grow online.
   </p>
 
   <div class="cards">
 
     <div class="card">
       <h3>🎬 Video Editing</h3>
-      <p>Professional editing for TikTok, Instagram Reels, adverts and promotional videos.</p>
+      <p>Professional editing for TikTok, Reels, adverts and promotional videos.</p>
       <div class="price">From ₦5,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Video%20Editing."
-        target="_blank">Get Started</a>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Video%20Editing.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>📱 Social Media Management</h3>
-      <p>Help managing and maintaining your social media presence and content.</p>
-      <div class="price">From ₦15,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Social%20Media%20Management."
-        target="_blank">Get Started</a>
+      <p>Help managing your social media pages, content and online presence.</p>
+      <div class="price">From ₦15,000/month</div>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Social%20Media%20Management.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
-      <h3>📸 Instagram Growth</h3>
-      <p>Get help growing your Instagram presence and reaching more people.</p>
-      <div class="price">From ₦5,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Instagram%20Growth."
-        target="_blank">Buy Now</a>
+      <h3>📸 Instagram Growth & Management</h3>
+      <p>Improve your Instagram presence with content and growth support.</p>
+      <div class="price">From ₦10,000</div>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Instagram%20Growth%20and%20Management.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
-      <h3>🎵 TikTok Promotion</h3>
-      <p>Promote your TikTok content and reach more potential viewers.</p>
-      <div class="price">From ₦5,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20TikTok%20Promotion."
-        target="_blank">Buy Now</a>
+      <h3>🎵 TikTok Growth & Management</h3>
+      <p>Improve your TikTok presence and create content for your audience.</p>
+      <div class="price">From ₦10,000</div>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20TikTok%20Growth%20and%20Management.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>🎨 Social Media Design</h3>
-      <p>Professional graphics for your social media pages and promotions.</p>
+      <p>Professional graphics for social media pages, products and promotions.</p>
       <div class="price">From ₦3,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Social%20Media%20Design."
-        target="_blank">Buy Now</a>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Social%20Media%20Design.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>🖌️ Logo Design</h3>
       <p>Professional logos for businesses, creators and personal brands.</p>
       <div class="price">From ₦5,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Logo%20Design."
-        target="_blank">Buy Now</a>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Logo%20Design.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>📰 Flyer & Poster Design</h3>
       <p>Eye-catching flyers and posters for businesses, events and promotions.</p>
       <div class="price">From ₦3,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Flyer%20and%20Poster%20Design."
-        target="_blank">Buy Now</a>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Flyer%20and%20Poster%20Design.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>✍️ Content Creation</h3>
       <p>Engaging content created for businesses, brands and social media pages.</p>
       <div class="price">From ₦10,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Content%20Creation."
-        target="_blank">Buy Now</a>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Content%20Creation.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
-      <h3>📢 Social Media Advertising</h3>
-      <p>Promote your business and reach your target customers online.</p>
+      <h3>📢 Social Media Advertising Setup</h3>
+      <p>Help setting up social media advertising campaigns for your business.</p>
       <div class="price">From ₦5,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Social%20Media%20Advertising."
-        target="_blank">Buy Now</a>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Social%20Media%20Advertising%20Setup.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>⭐ Influencer Promotion</h3>
-      <p>Promotional opportunities through suitable creators and influencers.</p>
-      <div class="price">From ₦5,000</div>
-      <a class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Influencer%20Promotion."
-        target="_blank">Buy Now</a>
+      <p>Connect your promotion with suitable creators and influencers.</p>
+      <div class="price">From ₦15,000</div>
+      <a class="blue-btn" href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20Influencer%20Promotion.%20Please%20send%20me%20the%20details." target="_blank">Buy Now</a>
     </div>
 
   </div>
@@ -460,64 +461,63 @@
 
 <section class="section marketplace" id="marketplace">
 
-  <h2>Social Media Marketplace</h2>
+  <div class="marketplace-inner">
 
-  <p class="section-intro">
-    Buy or sell eligible social media accounts through SocialMarket NG.
-  </p>
+    <h2>Social Media Marketplace</h2>
 
-  <div class="cards">
+    <p class="intro">
+      Explore social media account opportunities through SocialMarket NG.
+    </p>
 
-    <div class="market-card">
+    <div class="cards">
 
-      <div class="icon">🛒</div>
+      <div class="market-card">
+        <div class="market-icon">🛒</div>
 
-      <h3>Buy Social Media Accounts</h3>
+        <h3>Buy Social Media Accounts</h3>
 
-      <p>
-        Contact us to check available accounts, pricing and details.
-      </p>
+        <p>
+          Contact us to check current availability, pricing and transfer details.
+        </p>
 
-      <div class="price">From ₦4,000</div>
+        <div class="price">From ₦4,000</div>
 
-      <a
-        class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20buying%20a%20social%20media%20account%20from%20%E2%82%A64%2C000."
-        target="_blank">
-        Buy an Account
-      </a>
+        <a
+          class="blue-btn"
+          href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20interested%20in%20buying%20a%20social%20media%20account%20from%20%E2%82%A64%2C000.%20Please%20send%20me%20the%20available%20options."
+          target="_blank">
+          Buy an Account
+        </a>
+      </div>
+
+      <div class="market-card">
+        <div class="market-icon">💼</div>
+
+        <h3>Sell Social Media Accounts</h3>
+
+        <p>
+          If you are legally entitled to transfer an account, contact us
+          for a valuation and further information.
+        </p>
+
+        <div class="price">Free Valuation</div>
+
+        <a
+          class="blue-btn"
+          href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%20want%20to%20sell%20a%20social%20media%20account.%20Please%20tell%20me%20how%20it%20works."
+          target="_blank">
+          Sell an Account
+        </a>
+      </div>
 
     </div>
 
-
-    <div class="market-card">
-
-      <div class="icon">💼</div>
-
-      <h3>Sell Social Media Accounts</h3>
-
-      <p>
-        If you are legally entitled to transfer an account,
-        contact us for valuation and selling information.
-      </p>
-
-      <div class="price">Free Valuation</div>
-
-      <a
-        class="btn-blue"
-        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%20want%20to%20sell%20a%20social%20media%20account.%20Please%20tell%20me%20how%20it%20works."
-        target="_blank">
-        Sell an Account
-      </a>
-
-    </div>
+    <p class="note">
+      Account transactions must comply with the rules and terms of the relevant
+      social media platform. Only transfer accounts you are legally entitled to transfer.
+    </p>
 
   </div>
-
-  <p class="note">
-    Account transactions must comply with the rules and terms
-    of the relevant social media platform.
-  </p>
 
 </section>
 
@@ -526,7 +526,7 @@
 
   <h2>All Prices</h2>
 
-  <p class="section-intro">
+  <p class="intro">
     Starting prices for SocialMarket NG services.
   </p>
 
@@ -539,17 +539,17 @@
 
     <div class="pricing-row">
       <span>📱 Social Media Management</span>
-      <strong>From ₦15,000</strong>
+      <strong>From ₦15,000/month</strong>
     </div>
 
     <div class="pricing-row">
-      <span>📸 Instagram Growth</span>
-      <strong>From ₦5,000</strong>
+      <span>📸 Instagram Growth & Management</span>
+      <strong>From ₦10,000</strong>
     </div>
 
     <div class="pricing-row">
-      <span>🎵 TikTok Promotion</span>
-      <strong>From ₦5,000</strong>
+      <span>🎵 TikTok Growth & Management</span>
+      <strong>From ₦10,000</strong>
     </div>
 
     <div class="pricing-row">
@@ -573,62 +573,62 @@
     </div>
 
     <div class="pricing-row">
-      <span>📢 Social Media Advertising</span>
+      <span>📢 Social Media Advertising Setup</span>
       <strong>From ₦5,000</strong>
     </div>
 
     <div class="pricing-row">
       <span>⭐ Influencer Promotion</span>
-      <strong>From ₦5,000</strong>
+      <strong>From ₦15,000</strong>
     </div>
 
     <div class="pricing-row">
-      <span>🛒 Buy Social Media Accounts</span>
+      <span>🛒 Social Media Accounts</span>
       <strong>From ₦4,000</strong>
     </div>
 
-    <div class="pricing-row">
-      <span>💼 Sell Social Media Accounts</span>
-      <strong>Free Valuation</strong>
-    </div>
-
   </div>
+
 </section>
 
 
 <section class="section payment" id="payment">
 
-  <h2>💳 Pay Online with OPay</h2>
+  <div class="payment-inner">
 
-  <p class="section-intro" style="color:#d1d5db;">
-    Confirm your order with us before making payment.
-  </p>
+    <h2>💳 Pay Online with OPay</h2>
 
-  <div class="payment-box">
-
-    <h3>OPay Payment Details</h3>
-
-    <div class="payment-detail">
-      Account Name
-      <strong>David Favour OTARU</strong>
-    </div>
-
-    <div class="payment-detail">
-      OPay Account Number
-      <strong>9016050908</strong>
-    </div>
-
-    <p style="margin-top:15px; color:#667085;">
-      Please confirm your service and total amount with us
-      on WhatsApp before making payment.
+    <p class="intro">
+      Confirm your order and total amount with us before making payment.
     </p>
 
-    <a
-      class="btn-green"
-      href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%20want%20to%20make%20a%20payment.%20Please%20confirm%20my%20order%20and%20total%20amount."
-      target="_blank">
-      Confirm Payment on WhatsApp
-    </a>
+    <div class="payment-box">
+
+      <h3>OPay Payment Details</h3>
+
+      <div class="payment-detail">
+        Account Name
+        <strong>David Favour OTARU</strong>
+      </div>
+
+      <div class="payment-detail">
+        OPay Account Number
+        <strong>9016050908</strong>
+      </div>
+
+      <p style="color:#667085; line-height:1.5; margin-top:15px;">
+        Please contact SocialMarket NG on WhatsApp first.
+        Confirm the service and total amount before making payment.
+      </p>
+
+      <a
+        class="green-btn"
+        href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%20want%20to%20make%20a%20payment.%20Please%20confirm%20my%20order%20and%20total%20amount."
+        target="_blank">
+        Confirm Payment on WhatsApp
+      </a>
+
+    </div>
 
   </div>
 
@@ -639,24 +639,26 @@
 
   <h2>Our Work</h2>
 
-  <p class="section-intro">
-    Examples of the type of digital work SocialMarket NG provides.
+  <p class="intro">
+    Examples of the type of work SocialMarket NG provides.
   </p>
 
   <div class="cards">
 
     <div class="portfolio-card">
       <div class="portfolio-image">🎬 Video Editing</div>
+
       <div class="portfolio-content">
         <h3>Social Media Videos</h3>
         <p>
-          Clean edits, captions, transitions and promotional content.
+          Clean edits, captions, transitions and promotional video content.
         </p>
       </div>
     </div>
 
     <div class="portfolio-card">
       <div class="portfolio-image">🎨 Graphic Design</div>
+
       <div class="portfolio-content">
         <h3>Business Graphics</h3>
         <p>
@@ -666,9 +668,10 @@
     </div>
 
     <div class="portfolio-card">
-      <div class="portfolio-image">📱 Social Media</div>
+      <div class="portfolio-image">📱 Social Media Content</div>
+
       <div class="portfolio-content">
-        <h3>Social Media Content</h3>
+        <h3>Online Content</h3>
         <p>
           Content designed to help businesses build their online presence.
         </p>
@@ -684,23 +687,22 @@
 
   <h2>About SocialMarket NG</h2>
 
-  <p class="section-intro">
-    Digital services for businesses, creators and individuals.
+  <p class="intro">
+    Digital marketing and creative services for Nigerian businesses and creators.
   </p>
 
   <div class="about-box">
 
     <p>
-      SocialMarket NG is a Nigeria-focused digital services marketplace
-      helping businesses, creators and individuals improve their online
-      presence.
+      SocialMarket NG is a Nigeria-focused digital services business helping
+      businesses, creators and individuals improve their online presence.
     </p>
 
     <br>
 
     <p>
-      We provide social media services, video editing, graphic design,
-      content creation, promotion and marketplace services.
+      We provide social media management, content creation, video editing,
+      graphic design, advertising support and other digital solutions.
     </p>
 
   </div>
@@ -712,7 +714,7 @@
 
   <h2>Why Choose SocialMarket NG?</h2>
 
-  <p class="section-intro">
+  <p class="intro">
     Simple, affordable and accessible digital services.
   </p>
 
@@ -720,22 +722,22 @@
 
     <div class="card">
       <h3>🇳🇬 Nigeria Focused</h3>
-      <p>Services and prices designed with Nigerian customers in mind.</p>
+      <p>Services and starting prices designed for the Nigerian market.</p>
     </div>
 
     <div class="card">
       <h3>💰 Affordable</h3>
-      <p>Starting prices suitable for individuals, creators and businesses.</p>
+      <p>Clear starting prices for individuals, creators and businesses.</p>
     </div>
 
     <div class="card">
       <h3>📱 Mobile Friendly</h3>
-      <p>Easy to use from your phone, tablet or computer.</p>
+      <p>Easy to use from phones, tablets and computers.</p>
     </div>
 
     <div class="card">
       <h3>💬 WhatsApp Support</h3>
-      <p>Contact us directly to discuss your service or project.</p>
+      <p>Speak directly with us about your service or project.</p>
     </div>
 
   </div>
@@ -747,55 +749,57 @@
 
   <h2>Frequently Asked Questions</h2>
 
-  <p class="section-intro">
+  <p class="intro">
     Common questions about SocialMarket NG.
   </p>
 
   <div class="cards">
 
     <div class="card">
-      <h3>How do I order a service?</h3>
+      <h3>How do I order?</h3>
       <p>
-        Choose a service and click Buy Now or Get Started.
-        You will be taken directly to WhatsApp.
+        Choose a service and tap Buy Now. WhatsApp will open so you can
+        discuss your order with us.
       </p>
     </div>
 
     <div class="card">
       <h3>How do I pay?</h3>
       <p>
-        Confirm your order with us first, then use the OPay payment
-        details shown on the website.
+        Confirm your service and total amount with us first, then pay using
+        the OPay details on the website.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>How do I send my files?</h3>
+      <p>
+        We will tell you how to send your videos, images, logos or other
+        project files through WhatsApp.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>How long will my order take?</h3>
+      <p>
+        Delivery time depends on the service and project. We will confirm
+        the expected delivery time before starting.
       </p>
     </div>
 
     <div class="card">
       <h3>Can I buy a social media account?</h3>
       <p>
-        Yes. Contact us to check available accounts, pricing and
-        transfer details.
+        Contact us to check availability. Any transfer must comply with the
+        relevant platform's rules.
       </p>
     </div>
 
     <div class="card">
       <h3>Can I sell an account?</h3>
       <p>
-        Yes, if you are legally entitled to transfer it.
-        Contact us for a valuation.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Do you work with businesses?</h3>
-      <p>
-        Yes. We provide services for businesses, creators and individuals.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>How do I contact you?</h3>
-      <p>
-        Use any WhatsApp button on the website or the Contact section below.
+        Contact us for a valuation if you are legally entitled to transfer
+        the account.
       </p>
     </div>
 
@@ -806,27 +810,27 @@
 
 <section class="section contact" id="contact">
 
-  <h2>Let's Work Together</h2>
+  <div class="contact-inner">
 
-  <p>Ready to get started?</p>
+    <h2>Let's Work Together</h2>
 
-  <p>📱 WhatsApp: 0901 605 0908</p>
+    <p>Ready to get started?</p>
 
-  <p>💳 OPay: 9016050908</p>
+    <p>📱 WhatsApp: 0901 605 0908</p>
 
-  <a
-    class="btn"
-    href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20ready%20to%20get%20started."
-    target="_blank">
-    Contact Us on WhatsApp
-  </a>
+    <p>💳 OPay: 9016050908</p>
+
+    <a
+      class="btn"
+      href="https://wa.me/2349016050908?text=Hello%20SocialMarket%20NG%2C%20I%27m%20ready%20to%20get%20started."
+      target="_blank">
+      Contact Us on WhatsApp
+    </a>
+
+  </div>
 
 </section>
 
 
 <footer>
-  <p>© 2026 SocialMarket NG. All rights reserved.</p>
-</footer>
-
-</body>
-  </html>
+  <p>© 2026 SocialMarket NG
